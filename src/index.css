@@ -1,0 +1,553 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url("./../node_modules/font-awesome/css/font-awesome.css");
+
+html {
+    -webkit-text-size-adjust: none;
+}
+
+body,
+h1,
+h3,
+textarea {
+    font-family: Lato, Calibri, Candara, Arial, sans-serif;
+    font-size: 17px;
+    margin: 0;
+    color : #333;
+}
+
+.recime-messenger {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.recime-messenger-background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #fff;
+}
+
+.recime-conversation {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.recime-conversation-header {
+    z-index: 2147483001;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: #f4f7f9;
+    box-shadow: 0 0 1px rgba(0, 0, 0, .2);
+    color: #77808e;
+}
+
+.recime-conversation-header h1 {
+    font-size: 21px;
+    background-color: #fff;
+    padding: 15px;
+    border-bottom: 4px solid #3c6;
+    font-weight: 400;
+    margin: 0;
+}
+
+.recime-conversation-header h3 {
+  margin: 0;
+  padding: 3px 7px 0;
+  font-size: 18px;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.recime-conversation-header img {
+    width: 27px;
+    margin: 0;
+}
+
+.recime-conversation-header-img {
+    display: inline-block;
+    float: left;
+}
+
+.recime-conversation-header-details {
+    padding: 10px;
+}
+
+.recime-hero {
+    position: absolute;
+    bottom: 2px;
+    right : 7px;
+    /* width: 100%; */
+    vertical-align: middle;
+    color: #565867;
+    z-index: 999;
+}
+
+.recime-hero .brand {
+    position: relative;
+    text-align: center; 
+    /* padding: 5px; */
+    /* border-bottom: 1px solid #dfe9f5; */
+}
+
+.recime-hero .brand a img {
+   width:15px;
+   /* padding: 2px; */
+}
+.recime-hero .brand a {
+   text-decoration: none;
+    color: #ccc;
+    font-weight: 700;
+    font-size: 9px;
+    vertical-align: top;
+    text-transform: uppercase;
+    /* text-shadow: 4px 4px 1px #ccc; */
+}
+
+.recime-received-avatar img {
+    height: 30px;
+    width: 30px;
+    object-fit: contain;
+    padding: 5px;
+    margin: 0;
+    border-radius: 20px;
+}
+
+.recime-received-avatar {
+    line-height: 0;
+}
+
+.recime-conversation-body {
+    position: absolute;
+    left: 0;
+    right: 0;
+    overflow-y: scroll;
+    /* top: 143px; */
+    top :55px;
+    bottom: 50px;
+}
+
+.recime-conversation-body-wrapper {
+    padding: 0 20px;
+}
+
+.recime-conversation-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 0 0 6px 6px;
+}
+
+.recime-composer {
+    display: flex;
+    width: 100%;;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    min-height: 50px;
+    border-top: 1px solid #dfe9f5;
+    overflow: hidden;
+}
+
+.recime-composer input {
+    color: #565867;
+    background-color: #fff;
+    border:none;
+    transition: background-color .2s ease, box-shadow .2s ease;
+    width: 100%;
+    padding: 5px 5px 7px 15px;
+    outline: 0;
+    font-size: 1em;
+}
+
+.recime-composer > button {
+    color: #77808e !important;
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+    outline: 0;
+    padding-right: 15px;
+}
+
+.recime-composer textarea:focus {
+    outline: none;
+}
+
+.recime-received-message-container {
+    display: flex;
+    margin: 10px 40px 10px 0;
+    position: relative;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.recime-received-message {
+    text-align: left;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    border-radius: 5px;
+    padding: 7px 14px;
+    background-color: #eff4fa;
+    margin: 5px auto;
+    word-break: break-word;
+}
+
+/* generic template */
+
+.recime-received-message-generic-template {
+    text-align: left;
+    word-wrap: break-word;
+    width: 240px;
+    border-radius: 5px;
+    /*padding: 2px;*/
+    border: 1px solid #eff4fa;
+    background-color: #eff4fa;
+    margin-left: 5px;
+    padding: 5px;
+    /* font-size: 13px; */
+    overflow: hidden;
+}
+
+.recime-received-message-generic-template .generic-item {
+  padding: 10px 10px 0;
+}
+
+.recime-received-message-generic-template .generic-item > h4 {
+    padding: 2px;
+    margin: 0;
+}
+
+.recime-received-message-generic-template .generic-item > p {
+    padding: 2px;
+}
+
+.recime-received-message-generic-template ul {
+    list-style: none;
+    text-align: center;
+    /* background-color: #eff4fa; */
+    margin: 0;
+    padding: 0;
+}
+
+.recime-received-message-generic-template a {
+    /* border-bottom-left-radius: 5px; */
+    /* border-bottom-right-radius: 5px; */
+    color: #66cc99;
+    padding: 15px 0;
+    font-size: 15px;
+    width: 100%;
+    margin-left: -1px;
+    background: #fff;
+    border: 1px solid #dfe9f5;
+    outline: 0;
+    display: inline-block;
+}
+
+.recime-received-message-generic-template button {
+    /* border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px; */
+    color: #66cc99;
+    cursor: hand;
+    font-size: 15px;
+    padding: 15px 0;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #dfe9f5;
+    outline: 0;
+}
+
+
+.recime-received-message-generic-template img {
+    max-width: 300px;
+    /* border-top-left-radius: 4px; */
+    /* border-top-right-radius: 4px; */
+    /* padding: 5px; */
+    border: 1px solid #dfe9f5;
+    width: 100%;
+}
+
+/* button template */
+
+.recime-received-message-button-template {
+    text-align: left;
+    word-wrap: break-word;
+    border-radius: 5px;
+    border: 1px solid #eff4fa;
+    background-color: #eff4fa;
+    min-width: 228px;
+}
+
+.recime-received-message-button-template ul {
+    list-style: none;
+    background-color: #eff4fa;
+    padding: 5px;
+    margin: 0;
+}
+
+.recime-received-message-button-template > p {
+    padding: 7px;
+    margin: 0;
+}
+
+.recime-received-message-button-template > p > a{
+    background-color: #eff4fa;
+    margin: 0;
+    border :0;
+    padding: 0;
+}
+
+.recime-received-message-button-template button {
+    /* border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px; */
+    color: #66cc99;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 15px;
+    background: #fff;
+    border: 1px solid #dfe9f5;
+    outline: 0;
+    width:100%;
+}
+
+.recime-received-message-button-template a {
+    /* border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px; */
+    color: #66cc99;
+    padding: 15px 0;
+    font-size: 15px;
+    width: 100%;
+    margin-left: -1px;
+    background: #fff;
+    text-align: center;
+    border: 1px solid #dfe9f5;
+    outline: 0;
+    display: inline-block;
+}
+
+
+/* quick reply */
+.recime-received-message-quick-reply {
+  width: 100%
+}
+
+.recime-received-message-quick-reply button {
+  border-radius: 5px 5px 4px 4px;
+  color: #66cc99;
+  padding: 10px;
+  font-size: 15px;
+  display: inline-block;
+  background: #fff;
+  border: 1px solid #dfe9f5;
+  outline: 0;
+}
+
+.recime-received-message-quick-reply ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.recime-received-message-quick-reply li {
+    padding: 5px;
+    float: left;
+}
+
+.recime-sent-message-container {
+    align-items: flex-end;
+    display: flex;
+    margin: 10px 9px 10px 8px;
+    position: relative;
+    justify-content: flex-end;
+    direction: ltr;
+    flex-direction: column;
+}
+
+.recime-sent-message {
+    background-color: #3c6;
+    border-radius: 5px;
+    padding: 7px 14px;
+    margin-left: 40px;
+    color:#fff;
+}
+
+.recime-sent-message a {
+    color:#fff;
+}
+
+.recime-sent-message-status {
+    color: #54667a;
+    font-size: 11px;
+    margin-top: 2px;
+}
+
+.recime-text-error {
+    color: crimson;
+}
+
+.recime-received-message-details {
+    /*direction: ltr;*/
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    /* align-items: flex-end; */
+}
+
+.recime-received-message-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.recime-received-message-time,
+.recime-sent-message-time {
+    color: #767676;
+    font-size: 13px;
+    padding: 5px;
+}
+
+.recime-title-buttons {
+    float: right;
+ }
+
+.recime-title-buttons > button {
+  border: 0;
+  color: transparent;
+  display: inline-block;
+  height: 16px;
+  margin: 2px;
+  padding: 0;
+  width: 16px;
+  outline: 0;
+}
+
+#recime-messenger-reload-btn {
+    color: #77808e;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#recime-messenger-close-btn {
+    color: #77808e;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#recime-messenger-console-close-btn {
+    background: url('close-btn.png');
+}
+
+.recime-received-message-image img {
+    /* margin-left: 5px; */
+    /*max-width: 300px;*/
+    /* min-height: 200px; */
+    display: block;
+    /* border-radius: 4px; */
+    border : 1px solid #eff4fa;
+    width: 100%;
+}
+
+.recime-received-message-audio audio {
+    width: 100%;
+}
+
+.recime-received-message-video video {
+    width: 100%;
+}
+
+/* @media only screen and (max-device-width: 667px) {
+    #recime-messenger-close-btn {
+        display: block!important;
+    }
+  } */
+
+.recime-typing-indicator-container {
+  clear: both;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.recime-conversation-body-wrapper  > .recime-typing-indicator-container {
+  margin-top: 10px;
+}
+
+.recime-typing-indicator {
+  background-color: #eff4fa;
+  will-change: transform;
+  width: auto;
+  /* border-radius: 5px; */
+  display: table;
+  margin: 5px auto;
+  position: relative;
+  animation: 2s bulge infinite ease-out;
+  padding:12px 14px;
+}
+
+.recime-typing-indicator > span {
+  height: 7px;
+  width: 7px;
+  float: left;
+  margin: 0 1px;
+  background-color: #9e9ea1;
+  display: block;
+  border-radius: 50%;
+  opacity: 0.4;
+}
+
+.recime-typing-indicator span:nth-of-type(1) {
+  -webkit-animation: 1s blink infinite 0.3333s;
+  animation: 1s blink infinite 0.3333s;
+}
+
+.recime-typing-indicator span:nth-of-type(2) {
+  -webkit-animation: 1s blink infinite 0.6666s;
+  animation: 1s blink infinite 0.6666s;
+}
+
+.recime-typing-indicator span:nth-of-type(3) {
+  -webkit-animation: 1s blink infinite 0.9999s;
+  animation: 1s blink infinite 0.9999s;
+}
+
+@keyframes blink {
+  0% {
+    transform: translateY(0px);
+  }
+  28% {
+    transform: translateY(-6px);
+  }
+  44% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes bulge {
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-flow: column;
+}

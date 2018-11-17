@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url("./../node_modules/font-awesome/css/font-awesome.css");
+
+html {
+  -webkit-text-size-adjust: none;
+}
+
+body, html {
+  padding: 0;
+  margin: 0;
+  font-family: Lato, Calibri, Candara, Arial, sans-serif;
+  overflow: hidden;
+}
+
+#recime-launcher {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 5px 40px rgba(0, 0, 0, .16);
+  border-radius: 8px;
+}
+
+#recime-launcher:hover {
+  cursor: pointer;
+}
+
+.recime-launcher-open {
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #3c6;
+  display: block;
+  position: absolute;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.recime-launcher-open > img {
+  width: 35px;
+  padding-top: 15px;
+  vertical-align: middle
+}
+
+.recime-launcher-open > div {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.recime-launcher-open > div.fa-2x {
+  font-size: 2.2em;
+}
+
+.recime-launcher-open > span {
+  display: none;
+  padding-top: 15px;
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+
+.recime-launcher-open.console > img {
+  padding-top: 7px;
+}
+
+.recime-launcher-open.console {
+  flex-direction: row;
+  padding-left: 15px;
+}
+
+.recime-launcher-open.console > span {
+  padding-top: 0px;
+  padding-left: 2px;
+}
+
+.recime-launcher-open.console > div.fa-2x {
+  font-size: 2em;
+}
+
+.recime-launcher-close {
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #3c6;
+  display: none;
+  text-align: center;
+  font-size: 25px;
+  position: absolute;
+  color: #fff;
+  cursor: pointer;
+}
+.recime-launcher-close img {
+  width: 20px;
+  padding-top: 20px;
+}
+
+.active-chat .recime-launcher-open {
+  display: none;
+}
+
+.active-chat .recime-launcher-close {
+  display: block;
+}
+
+.recime-launcher-close.console > img {
+    display: none;
+}
+
